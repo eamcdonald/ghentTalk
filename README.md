@@ -1,2 +1,2 @@
 # ghentTalk
-Talk for Ghent 14th Jan 2025
+Talk for Ruzhansky's group at Ghent, 14/1/25
