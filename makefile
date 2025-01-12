@@ -1,5 +1,5 @@
-# Makefile for the talk at the Wollongong NCG seminar
-NAME=wollongongtalk
+# Makefile for the talk at Ghent in 2025
+NAME=ghenttalk
 
 $(NAME).pdf: $(NAME).tex clean
 	pdflatex $<
