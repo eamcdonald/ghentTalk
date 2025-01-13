@@ -198,8 +198,9 @@
     \]
     where $m(F,u)$ is the \emph{paradifferential operator}
     \[
-        m(F,u) = \sum_{j=0}^\infty \int_0^1 F'(S_{j-1}u+\theta \Delta_ju)\Delta_j d\theta.
+        m(F,u)v = \sum_{j=0}^\infty \int_0^1 F'(S_{j-1}u+\theta \Delta_ju)\Delta_jv d\theta.
     \]
+    Sometimes this is called \emph{paralinearisation}.
 \end{frame}
 
 \begin{frame}{Bourdaud's theorem}
@@ -330,7 +331,7 @@
     \]
     In terms of $\lambda_\theta,$ we have
     \[
-        m(-i\nabla)\lambda_\theta(f) = \lambda_\theta(mf) = \int_{\mathbb{R}^d} m(\xi)\lambda_\theta(\xi)
+        m(-i\nabla)\lambda_\theta(f) = \lambda_\theta(mf) = (2\pi)^{-d}\int_{\mathbb{R}^d} m(\xi)\lambda_\theta(\xi)f(\xi)\,d\xi.
     \]
 %     and associated questions such as Sobolev embedding and elliptic regularity.\pause
 
