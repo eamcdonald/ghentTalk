@@ -144,18 +144,17 @@
 
 \begin{document}
 
-\title[Some recent progress and unanswered questions in Quantum Harmonic Analysis]{Progress and Questions in QHA}
-
+\title[Progress and Questions in QHA]{Some recent progress and unanswered questions in Quantum Harmonic Analysis}
 
 \author[E. McDonald]{Edward McDonald (Penn State University)}
 
 
-\institute[]{\tiny{Ghent University} }
+\institute[]{\tiny{Ghent University}}
 
 \makebeamertitle
 
 \begin{frame}\frametitle{Plan for this talk}
-    In this talk I will go over some of the recent work
+    In this talk I will go over some introductory material in Quantum Harmonic Analysis and propose some future work.
 \end{frame}
 
 \section{Prologue: Meyer's decomposition}\label{meyer_section}
@@ -170,9 +169,9 @@
     \[
         L_{\infty}(\Rl^d,\Rl)\to L_{\infty}(\Rl^d),\quad u\mapsto F(u)
     \]
-    is sometimes called the \emph{Nemytskij operator}.
+    is sometimes called the \emph{Nemytskij operator}.\\
 \pause
-    \textbf{Question:} In terms of function spaces what are the mapping properties of $u\mapsto F(u)$? (This is needed for nonlinear PDE).
+    \textbf{Question:} In terms of function spaces, what are the mapping properties of $u\mapsto F(u)$? (This is needed for nonlinear PDE).
 \end{frame}
 
 \begin{frame}{Meyer's decomposition}
@@ -221,15 +220,15 @@
 
 
 \begin{frame}{Quantum Euclidean spaces}
-    Let $d\geq 1$ and let $\theta$ be a $d\times d$ antisymmetric real matrix. The quantum Euclidean space is an attempt to make rigorous mathematical sense of a space $\Rl^d_\theta$ with coordinates functions
+    Let $d\geq 1$ and let $\theta$ be a $d\times d$ antisymmetric real matrix. The quantum Euclidean space is an attempt to make rigorous mathematical sense of a space $\Rl^d_\theta$ with coordinate functions
     \[
-        \{x_1,\ldots,x_d\}
+        x_1,\ldots,x_d
     \]
-    which do not commute, but instead
+    which do not commute, but instead satisfy the relation
     \[
         x_jx_k-x_kx_j = i\theta_{j,k}.
     \]
-    The construciton goes by many names (Noncommutative Euclidean space, Quantum Euclidean space, Moyal $d$-space, Groenwald space, and others).\pause
+    The construciton goes by many names (Noncommutative Euclidean space, Quantum Euclidean space, Moyal $d$-space, Groenwald space, CCR algebras).\pause
 
     Much of the literature motivates this from the relation $[q,p]=i\hbar$ from quantum mechanics.
 \end{frame}
@@ -275,7 +274,7 @@
 
 \begin{frame}{Identification of $L_{\infty}(\Rl^d_\theta)$}
     As a von Neumann algebra, $L_{\infty}(\Rl^d_\theta)$ is not very complicated: it has type $I.$
-    \begin{theorem}[Essentially due to Stone and von Neumann]
+    \begin{theorem}[Stone-von Neumann]
         There is a $*$-algebra isomorphism
         \[
             L_{\infty}(\Rl^d_\theta) \approx L_{\infty}(\Rl^{\mathrm{\ker(\theta)}})\otimes \Bc(L_2(\Rl^{\frac{\mathrm{rank}(\theta)}{2}})).
@@ -298,7 +297,7 @@
     \]
     is smooth. We can define the derivatives
     \[
-        \partial_jx = \frac{d}{dt} T_{te_j}(x)|_{t=0}.
+        \partial_jx := \frac{d}{dt} T_{te_j}(x)|_{t=0}.
     \]
 \end{frame}
 
@@ -349,7 +348,7 @@
 \end{frame}
 
 \begin{frame}{Linear PDE, variable coefficients}
-    There is a theory (Gonzales-Perez, Junge, Parcet [GJP]) of elliptic PDE defined in terms of \emph{left} multipliers:
+    There is a theory (Gonz\'{a}lez-P\'{e}rez, Junge, Parcet [GJP]) of elliptic PDE defined in terms of \emph{left} multipliers:
     \[
         \sum_{|\alpha|\leq m} a_{\alpha} \cdot \partial^{\alpha}u = f
     \]
@@ -361,7 +360,7 @@
     \]
     Here, $\sigma:\Rl^d\to L_{\infty}(\Rl^d_\theta)$ is a smooth function satisfying
     \[
-        \|\partial_{\xi}^{\alpha}\partial^\beta \sigma(x,\xi)\|_{\infty} \lesssim (1+|\xi|)^{m-\rho|\alpha|+\delta |\beta|}.
+        \|\partial_{\xi}^{\alpha}\partial^\beta \sigma(\xi)\|_{\infty} \lesssim (1+|\xi|)^{m-\rho|\alpha|+\delta |\beta|}.
     \]
     \pause
     Using these operators, [GJP] analysed the $L_p$-theory of linear elliptic equations.
@@ -412,7 +411,7 @@
 
 \begin{frame}{Bilateral multiplication}
 The algebra $L_\infty(\Rl^d_\theta)^\op$ is the opposite algebra. Given $A \in L_\infty(\Rl^d_\theta)\otimes L_\infty(\Rl^d_\theta)^{\mathrm{op}}$
-and $u \in L_1(\Rl^d_\theta)$, denote $A\dmult u$ for the linear extension of the mapping $(a\otimes b)\dmult u = aub$.
+and $u \in L_\infty(\Rl^d_\theta)$, denote $A\dmult u$ for the linear extension of the mapping $(a\otimes b)\dmult u = aub$.
 The Haagerup tensor product $L_\infty(\Rl^d_\theta)\otimes_h L_\infty(\Rl^d_\theta)$ has the property that $\dmult$ has a continuous extension
 \[
     \dmult:(L_{\infty}(\Rl^d_\theta)\otimes_{h} L_{\infty}(\Rl^d_\theta)^{\op})\times L_{\infty}(\Rl^d_\theta)\to L_{\infty}(\Rl^d_\theta).
@@ -428,7 +427,7 @@ The Haagerup tensor product $L_\infty(\Rl^d_\theta)\otimes_h L_\infty(\Rl^d_\the
     \end{equation*}
     Such that for all multi-indices $\alpha,\beta_1,\beta_2\in \Ntrl^d$ we have:
     \begin{equation*}
-        \|\partial_\xi^\alpha (\partial_x^{\beta_1}\otimes \partial_x^{\beta_2})\sigma(\xi)\|_{L_\infty(\Rl^d_\theta)\otimes_h L_\infty(\Rl^d_\theta)} \leq C_{\alpha,\beta_1,\beta_2}(1+|\xi|)^{m-\rho|\alpha|+\delta_1|\beta_1|+\delta_2|\beta_2|}
+        \|\partial_\xi^\alpha (\partial^{\beta_1}\otimes \partial^{\beta_2})\sigma(\xi)\|_{L_\infty(\Rl^d_\theta)\otimes_h L_\infty(\Rl^d_\theta)} \leq C_{\alpha,\beta_1,\beta_2}(1+|\xi|)^{m-\rho|\alpha|+\delta_1|\beta_1|+\delta_2|\beta_2|}
     \end{equation*}
 \end{definition}
 \end{frame}
@@ -457,6 +456,7 @@ Denote space of such operators by $\Psi^{m}_{\rho,\delta_1,\delta_2}(\Rl^d_\thet
 \end{itemize}
 \end{frame}
 
+
 \begin{frame}
 \structure{\begin{center}
 {\Huge{}Thank you for listening!}
@@ -464,6 +464,29 @@ Denote space of such operators by $\Psi^{m}_{\rho,\delta_1,\delta_2}(\Rl^d_\thet
 \end{frame}
 
 
+\begin{frame}{Further reading}
+\tiny{
+    For more about the Meyer decomposition:
+    \begin{itemize}
+        \item{} M.~Taylor. Partial differential equations III. Nonlinear equations. Second Edition. \textit{Applied Mathematical Sciences} 117, Springer, New York, 2011.
+        \item{} H.~Bahouri, J.~Chemin, R.~Danchin. Fourier analysis and nonlinear partial differential equations. \textit{Grundlehren der Mathematischen Wissenschaften} 343, Springer, Heidelberg, 2011.
+        \item{} T.~Runst, W.~Sickel. {Sobolev spaces of fractional order, {N}emytskij operators, and nonlinear partial differential equations}, \textit{De Gruyter Series in Nonlinear Analysis and Applications}, {3}, {Walter de Gruyter \& Co., Berlin}, {1996}.
+    \end{itemize}
+    For more about quantum Euclidean spaces, see
+    \begin{itemize}
+        \item{} S.~Lord, E.~M., F.~Sukochev, D.~Zanin. {Singular traces. {V}ol. 2. {T}race formulas}. \textit{De Gruyter Studies in Mathematics} {46/2}, De Gruyter, Berlin, 2023.
+        \item{} L.~Lafleche. \textit{{On {Q}uantum {S}obolev {I}nequalities},} {arxiv:2210.03013}.
+        \item{} A.~Gonz\'{a}lez-P\'{e}rez, M.~Junge, J.~Parcet. \textit{Singular integrals in quantum {E}uclidean spaces}, {Mem. Amer. Math. Soc.}, {272}, {2021}.
+        \item{} E.~M., F.~Sukochev, X.~Xiong. \textit{Quantum differentiability---the analytical perspective}, {Proc. Sympos. Pure Math.}, {105}, 2023.
+    \end{itemize}
+    For more about PDE on quantum Euclidean spaces, see
+    \begin{itemize}
+        \item{} E.~M. \textit{Nonlinear partial differential equations on noncommutative {E}uclidean spaces}, {J. Evol. Equ.}, {24}, {2024},
+        \item{} M.~Ruzhansky, S.~Shaimardan, K.~Tulenov. \textit{Sobolev inequality and its applications to nonlinear PDE on noncommutative Euclidean spaces}, arXiv:2408.09100.
+        \item{} C.~Arhancet, L.~Hagedorn, C.~Kriegler, P.~Portal. \textit{The harmonic oscillator on the Moyal-Groenwald plane: an approach via Lie groups and twisted Weyl tuples}, arXiv:2312.06143.
+    \end{itemize}
+}
+\end{frame}
 
 \end{document}
 
