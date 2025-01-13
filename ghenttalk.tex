@@ -144,7 +144,7 @@
 
 \begin{document}
 
-\title[Progress and Questions in QHA]{Some recent progress and unanswered questions in Quantum Harmonic Analysis}
+\title[Progress and Questions in QHA]{Recent work and unsolved problems in Quantum Harmonic Analysis}
 
 \author[E. McDonald]{Edward McDonald (Penn State University)}
 
@@ -169,7 +169,7 @@
     \[
         L_{\infty}(\Rl^d,\Rl)\to L_{\infty}(\Rl^d),\quad u\mapsto F(u)
     \]
-    is sometimes called the \emph{Nemytskij operator}.\\
+    is sometimes called a \emph{Nemytskij operator}.\\
 \pause
     \textbf{Question:} In terms of function spaces, what are the mapping properties of $u\mapsto F(u)$? (This is needed for nonlinear PDE).
 \end{frame}
@@ -226,9 +226,9 @@
     \]
     which do not commute, but instead satisfy the relation
     \[
-        x_jx_k-x_kx_j = i\theta_{j,k}.
+        x_jx_k-x_kx_j = i\theta_{j,k},\quad 1\leq j,k\leq d.
     \]
-    The construciton goes by many names (Noncommutative Euclidean space, Quantum Euclidean space, Moyal $d$-space, Groenwald space, CCR algebras).\pause
+    The object goes by many names (Noncommutative Euclidean space, Quantum Euclidean space, Moyal $d$-space, Groenwald space, CCR algebras).\pause
 
     Much of the literature motivates this from the relation $[q,p]=i\hbar$ from quantum mechanics.
 \end{frame}
@@ -324,13 +324,17 @@
 \end{frame}
 
 \begin{frame}{Harmonic analysis questions}
-    Many authors (notably G.~Hong) and most recently M. Ruzhansky and S. Shaimardan and K. Tulenov have addressed the problem of Fourier multipliers on $\Rl^d_\theta.$ I.e., the boundedness of functions
+    Many authors (such as G.~Hong) and most recently M. Ruzhansky and S. Shaimardan and K. Tulenov have addressed the problem of Fourier multipliers on $\Rl^d_\theta.$ I.e., the boundedness of operators
     \[
-        m(-i\nabla):L_p(\Rl^d_\theta)\to L_{q}(\Rl^d_\theta)
+        m(-i\partial_1,-i\partial_2,\ldots,-i\partial_d):L_p(\Rl^d_\theta)\to L_{q}(\Rl^d_\theta).
     \]
-    and associated questions such as Sobolev embedding and elliptic regularity.\pause
+    In terms of $\lambda_\theta,$ we have
+    \[
+        m(-i\nabla)\lambda_\theta(f) = \lambda_\theta(mf) = \int_{\mathbb{R}^d} m(\xi)\lambda_\theta(\xi)
+    \]
+%     and associated questions such as Sobolev embedding and elliptic regularity.\pause
 
-    We can also define Sobolev spaces $W^s_p(\Rl^d_\theta)$ (Gonzales-Perez, Junge, Parcet) and Besov spaces $B^s_{p,q}(\Rl^d_\theta)$ (Lafleche). Triebel spaces $F^s_{p,q}(\Rl^d_\theta)$ are more challenging.
+    We can also define Sobolev spaces $W^s_p(\Rl^d_\theta)$ (Gonz\'alez-P\'erez, Junge, Parcet) and Besov spaces $B^s_{p,q}(\Rl^d_\theta)$ (Lafleche). Triebel spaces $F^s_{p,q}(\Rl^d_\theta)$ are more challenging.
 \end{frame}
 
 \section{PDE on quantum Euclidean spaces}\label{pde_section}
@@ -344,7 +348,7 @@
     \[
         P(-i\nabla)u = f
     \]
-    are best studied with Fourier multipliers. Here pretty much everything works as in the commutative case.
+    are best studied with Fourier multipliers. Here, things are mostly similar to the commutative case.
 \end{frame}
 
 \begin{frame}{Linear PDE, variable coefficients}
@@ -354,7 +358,7 @@
     \]
     where $a_{\alpha}\in C^\infty(\Rl^d_\theta).$
 
-    \pause To analyse these, they defined left pseudodifferential operators on $u\in \Sc(\Rl^d_\theta)$ by
+    \pause To analyse these, they defined \emph{left} pseudodifferential operators on $u\in \Sc(\Rl^d_\theta)$ by
     \[
         T_{\sigma}u = (2\pi)^{-d}\int_{\Rl^d} \sigma(\xi)\lambda_\theta(\xi)\tau_\theta(\lambda_\theta(\xi)^*u)\,d\xi.
     \]
@@ -406,7 +410,7 @@
     \[
         m(F,u)v = \sum_{j=0}^\infty S_{j-1}u\Delta_j v+\Delta_j v S_{j}u.
     \]
-    Note that here we need both \emph{left} and \emph{right} multiplication.
+    Note that here we need both \emph{left} and \emph{right} multiplication. The situation for more general functions $F$ is similar.
 \end{frame}
 
 \begin{frame}{Bilateral multiplication}
@@ -437,12 +441,12 @@ Let $\sigma\in S^m_{\rho,\delta_1,\delta_2}(\Rl^d\times \Rl^d_\theta).$ Define a
 \begin{equation*}
     T_\sigma u := (2\pi)^{-d}\int_{\Rl^d} (\sigma(\xi)\dmult \lambda_\theta(\xi))\tau_\theta(\lambda_\theta(\xi)^*u)\,d\xi
 \end{equation*}
-Denote space of such operators by $\Psi^{m}_{\rho,\delta_1,\delta_2}(\Rl^d_\theta).$
+Denote the space of such operators by $\Psi^{m}_{\rho,\delta_1,\delta_2}(\Rl^d_\theta).$
 \pause
 \begin{conjecture}
 \begin{itemize}
     \item{} For $\delta_1+\delta_2<\rho,$ $\Psi^m_{\rho,\delta_1,\delta_2}(\Rl^d_\theta)$ has similar properties of adjointability, composition and asymptotic convergence to traditional pseudodifferential operators. \pause
-    \item{} For $\rho=1>\delta_1+\delta_2,$ and $m=0,$ we have boundedness on $L_p(\Rl^d_\theta)$ for $1<p<\infty.$
+    \item{} For $\rho=1>\delta_1+\delta_2,$ and $m=0,$ we have boundedness on $L_p(\Rl^d_\theta)$ for $1<p<\infty.$\pause
     \item{} In general for $m=0,$ we have boundedness on $W^s_p(\Rl^d_\theta)$ for $s>0.$
 \end{itemize}
 \end{conjecture}
@@ -451,8 +455,8 @@ Denote space of such operators by $\Psi^{m}_{\rho,\delta_1,\delta_2}(\Rl^d_\thet
 \begin{frame}{Why is it interesting?}
 \begin{itemize}
     \item{} If the conjecture is correct, we would have a \emph{genuinely noncommutative} theory of pseudodifferential operators which would allow us to study bilateral PDE and also nonlinear PDE
-    over $\Rl^d_\theta.$
-    \item{} Following the standard commutative proofs does not seem to work.
+    over $\Rl^d_\theta.$\pause
+    \item{} Following the standard commutative proofs does not seem to work, it seems that new ideas are needed.
 \end{itemize}
 \end{frame}
 
@@ -468,22 +472,22 @@ Denote space of such operators by $\Psi^{m}_{\rho,\delta_1,\delta_2}(\Rl^d_\thet
 \tiny{
     For more about the Meyer decomposition:
     \begin{itemize}
-        \item{} M.~Taylor. Partial differential equations III. Nonlinear equations. Second Edition. \textit{Applied Mathematical Sciences} 117, Springer, New York, 2011.
-        \item{} H.~Bahouri, J.~Chemin, R.~Danchin. Fourier analysis and nonlinear partial differential equations. \textit{Grundlehren der Mathematischen Wissenschaften} 343, Springer, Heidelberg, 2011.
-        \item{} T.~Runst, W.~Sickel. {Sobolev spaces of fractional order, {N}emytskij operators, and nonlinear partial differential equations}, \textit{De Gruyter Series in Nonlinear Analysis and Applications}, {3}, {Walter de Gruyter \& Co., Berlin}, {1996}.
+        \item{} M.~Taylor. Partial differential equations III. Nonlinear equations. Second Edition. \textit{Applied Mathematical Sciences} \textbf{117}, Springer, New York, 2011.
+        \item{} H.~Bahouri, J.~Chemin, R.~Danchin. Fourier analysis and nonlinear partial differential equations. \textit{Grundlehren der Mathematischen Wissenschaften} \textbf{343}, Springer, Heidelberg, 2011.
+        \item{} T.~Runst, W.~Sickel. {Sobolev spaces of fractional order, {N}emytskij operators, and nonlinear partial differential equations}, \textit{De Gruyter Series in Nonlinear Analysis and Applications}, \textbf{3}, {Walter de Gruyter \& Co., Berlin}, {1996}.
     \end{itemize}
     For more about quantum Euclidean spaces, see
     \begin{itemize}
-        \item{} S.~Lord, E.~M., F.~Sukochev, D.~Zanin. {Singular traces. {V}ol. 2. {T}race formulas}. \textit{De Gruyter Studies in Mathematics} {46/2}, De Gruyter, Berlin, 2023.
-        \item{} L.~Lafleche. \textit{{On {Q}uantum {S}obolev {I}nequalities},} {arxiv:2210.03013}.
-        \item{} A.~Gonz\'{a}lez-P\'{e}rez, M.~Junge, J.~Parcet. \textit{Singular integrals in quantum {E}uclidean spaces}, {Mem. Amer. Math. Soc.}, {272}, {2021}.
-        \item{} E.~M., F.~Sukochev, X.~Xiong. \textit{Quantum differentiability---the analytical perspective}, {Proc. Sympos. Pure Math.}, {105}, 2023.
+        \item{} S.~Lord, E.~M., F.~Sukochev, D.~Zanin. {Singular traces. {V}ol. 2. {T}race formulas}. \textit{De Gruyter Studies in Mathematics} \textbf{46/2}, De Gruyter, Berlin, 2023.
+        \item{} L.~Lafleche. \textit{{On {Q}uantum {S}obolev {I}nequalities},} {\color{red}\href{https://arxiv.org/abs/2210.03013}{arXiv:2210.03013}}.
+        \item{} A.~Gonz\'{a}lez-P\'{e}rez, M.~Junge, J.~Parcet. \textit{Singular integrals in quantum {E}uclidean spaces}, {Mem. Amer. Math. Soc.}, \textbf{272}, {2021}.
+        \item{} E.~M., F.~Sukochev, X.~Xiong. \textit{Quantum differentiability---the analytical perspective}, {Proc. Sympos. Pure Math.}, \textbf{105}, 2023.
     \end{itemize}
     For more about PDE on quantum Euclidean spaces, see
     \begin{itemize}
-        \item{} E.~M. \textit{Nonlinear partial differential equations on noncommutative {E}uclidean spaces}, {J. Evol. Equ.}, {24}, {2024},
-        \item{} M.~Ruzhansky, S.~Shaimardan, K.~Tulenov. \textit{Sobolev inequality and its applications to nonlinear PDE on noncommutative Euclidean spaces}, arXiv:2408.09100.
-        \item{} C.~Arhancet, L.~Hagedorn, C.~Kriegler, P.~Portal. \textit{The harmonic oscillator on the Moyal-Groenwald plane: an approach via Lie groups and twisted Weyl tuples}, arXiv:2312.06143.
+        \item{} E.~M. \textit{Nonlinear partial differential equations on noncommutative {E}uclidean spaces}, {J. Evol. Equ.}, \textbf{24}, {2024},
+        \item{} M.~Ruzhansky, S.~Shaimardan, K.~Tulenov. \textit{Sobolev inequality and its applications to nonlinear PDE on noncommutative Euclidean spaces}, {\color{red}\href{https://arxiv.org/abs/2408.09100}{arXiv:2408.09100}}.
+        \item{} C.~Arhancet, L.~Hagedorn, C.~Kriegler, P.~Portal. \textit{The harmonic oscillator on the Moyal-Groenwald plane: an approach via Lie groups and twisted Weyl tuples}, {\color{red}\href{https://arxiv.org/abs/2312.06143}{arXiv:2312.06143}}.
     \end{itemize}
 }
 \end{frame}
